@@ -15,7 +15,7 @@
 */
 
 var me = {
-  name: 'Brandon',
+  name: 'Brandon Craig',
   age: 24,
 }
 alert(me.name);//Code here
@@ -28,11 +28,11 @@ alert(me.name);//Code here
 */
 
 var favoriteThings = {
-  band: 'TwentyOnePilots',
+  band: 'Imagine Dragons',
   food: 'Salmon',
-  person: 'Brother',
+  person: 'Kaylee',
   book: 'Dictionary',
-  movie: 'NotPicky',
+  movie: 'No Preference',
   holiday: 'Christmas'
 } //Code here
 
@@ -41,8 +41,8 @@ var favoriteThings = {
   and then another key named 'brand' with the value being your favorite brand.
 */
 
-favoriteThings.car = 'Mustang',
-  favoriteThings.brand = 'NoIdea'
+favoriteThings.car = 'Ford Mustang',
+  favoriteThings.brand = 'Microsoft'
 //Code here
 
 /*
@@ -116,7 +116,7 @@ console.log(user2)
 /*
   Create an empty object called methodCollection.
 */
-
+var methodCollection = {};
 //Code Here
 
 /*
@@ -124,13 +124,21 @@ console.log(user2)
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
-//Code Here
+var methodCollection = {
+  alertHello: function(){
+    alert('hello');
+  },
+  logHello: function(){
+    console.log('hello');
+  }
+};
 
 /*
   Now call your alertHello and logHello methods.
 */
 
-//Code Here
+methodCollection.alertHello();
+methodCollection.logHello();
 
 ////////// PROBLEM 6 //////////
 
@@ -139,7 +147,19 @@ console.log(user2)
   Return a new object with all of the information that you passed in.
 */
 
-//Code Here
+function makePerson ( name, birthday, ssn ){
+  return {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+    };
+  } 
+   var newObject = makePerson( 'Brandon',
+    'March 26, 1995',
+     '111-11-1111');
+
+  console.log(newObject);
+
 
 ////////// PROBLEM 7 //////////
 
@@ -148,4 +168,10 @@ console.log(user2)
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard( cardNumber, expirationDate, securityCode ) {
+  return {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+}
